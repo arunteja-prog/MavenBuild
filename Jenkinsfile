@@ -16,9 +16,5 @@ node(){
 	stage('Code Deployment'){
 		deploy adapters: [tomcat9(credentialsId: 'TomcatCreds', path: '', url: 'http://54.248.177.169:8080/')], contextPath: 'aruntejatestpipeline', onFailure: false, war: 'target/*.war'
 	}
-
-
-
-
 }
 
